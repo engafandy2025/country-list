@@ -32,7 +32,7 @@ class CountryListAdapter(private val countries: CountryListDto) :
     }
     class CountryViewHolder( itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(country: CountryListDtoItem) {
-            itemView.findViewById<TextView>(R.id.country_name).text = country.name
+            itemView.findViewById<TextView>(R.id.country_name).text = country.name +", "
             itemView.findViewById<TextView>(R.id.country_region).text = country.region
             itemView.findViewById<TextView>(R.id.country_code).text = country.code
             itemView.findViewById<TextView>(R.id.country_capital).text = country.capital
